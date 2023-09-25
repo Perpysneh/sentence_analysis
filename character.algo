@@ -1,0 +1,25 @@
+ALGORITHM sentence_analysis
+VAR
+   sentence: STRING;
+   wordCount: INTEGER := 0;
+   vowelCount: INTEGER := 0;
+   sentenceLength: INTEGER := 0;
+   currentCharacter: CHAR;
+
+   BEGIN
+     Read(sentence)
+     FOR each character currentCharacter in sentence:
+        Increase sentenceLength by 1
+
+        if currentCharacter is a space
+           Increase wordCount by 1
+
+           if currentCharacter is in {a,e,i,o,u,A,E,I,O,U}
+             Increase vowelCount by 1
+             END FOR
+
+             write(sentenceLength)
+             write(wordCount)
+             write(vowelCount)
+
+             END
