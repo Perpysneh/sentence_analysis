@@ -1,0 +1,14 @@
+ALGORITHM distinct_element_array
+
+function sumOfDistinctElements(set1, set2) {
+    let distinctElements = new Set([...set1, ...set2]);
+    let sum = 0;
+    for (let element of distinctElements) {
+        sum += element;
+    }
+    return sum;
+}
+
+let set1 = [3, 1, 7, 9];
+let set2 = [2, 4, 1, 9,3,]
+console.log(sumOfDistinctElements(set1, set2));
